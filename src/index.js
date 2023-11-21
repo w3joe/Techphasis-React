@@ -16,10 +16,10 @@ const App = () => {
   return (
     <Router>
       <Switch>
-        <Route component={NotFound} path="**" />
+        <Route component={NotFound} path="/404" />
         <Route component={Contact} exact path="/contact" />
         <Route component={Home} exact path="/" />
-        <Redirect to="**" />
+        <Redirect to="/404" />
       </Switch>
     </Router>
   )
