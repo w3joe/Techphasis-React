@@ -1,24 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
-import PropTypes from 'prop-types'
+import PropTypes from "prop-types";
 
-import './navbar-interactive.css'
+import "./navbar-interactive.css";
 
 const NavbarInteractive = (props) => {
+  const [clicked, setClicked] = useState("");
   return (
     <div className={`navbar-interactive-container ${props.rootClassName} `}>
       <header
         data-thq="thq-navbar"
         className="navbar-interactive-navbar-interactive"
       >
-        <div className="navbar-interactive-container1">
+        <Link to="/" className="navbar-interactive-container1">
           <img
             alt={props.image_alt1}
             src="/techphasis%20logo-05-200h.jpg"
             className="navbar-interactive-image"
           />
-        </div>
+        </Link>
         <div
           data-thq="thq-navbar-nav"
           className="navbar-interactive-desktop-menu"
@@ -49,6 +50,7 @@ const NavbarInteractive = (props) => {
         <div
           data-thq="thq-burger-menu"
           className="navbar-interactive-burger-menu"
+          onClick={() => setClicked(" teleport-show thq-show thq-translate-to-default")}
         >
           <svg viewBox="0 0 1024 1024" className="navbar-interactive-icon">
             <path
@@ -59,7 +61,7 @@ const NavbarInteractive = (props) => {
         </div>
         <div
           data-thq="thq-mobile-menu"
-          className="navbar-interactive-mobile-menu"
+          className={"navbar-interactive-mobile-menu" + clicked }
         >
           <div className="navbar-interactive-container2">
             <div className="navbar-interactive-nav">
@@ -67,6 +69,7 @@ const NavbarInteractive = (props) => {
                 <div
                   data-thq="thq-close-menu"
                   className="navbar-interactive-close-menu"
+                  onClick={() => setClicked("")}
                 >
                   <svg
                     viewBox="0 0 1024 1024"
@@ -103,44 +106,44 @@ const NavbarInteractive = (props) => {
         </div>
       </header>
     </div>
-  )
-}
+  );
+};
 
 NavbarInteractive.defaultProps = {
-  Nav4: 'Careers\n',
-  Nav12: 'Home',
-  Nav511: 'Contact',
-  Nav1: 'Home',
-  image_src: 'https://play.teleporthq.io/static/svg/default-img.svg',
-  Nav52: 'Pricing',
-  Nav211: 'Services',
-  Nav32: 'About',
-  Register11: 'Register',
-  Nav411: 'Testimonials',
-  Register: 'Request a consultation',
-  Nav31: 'Portfolio',
-  Nav2: 'Services',
-  image_alt: 'image',
-  Nav311: 'Portfolio',
-  Nav21: 'Services',
-  Nav11: 'Home',
-  rootClassName: '',
-  Nav42: 'Careers\n',
-  Logo: 'LOGO',
-  Nav51: 'Contact',
-  Logo1: 'TECHDEV',
-  image_alt1: 'image',
-  image_src1: '54e2aa9c-186d-4f89-8f95-3e33b5306d24',
-  Nav111: 'Home',
-  Nav41: 'Testimonials',
-  Logo11: 'TECHDEV',
-  Register1: 'Register',
-  Login: 'Login',
-  Nav5: 'Pricing',
-  Nav22: 'Services',
-  Nav3: 'About',
-  Login1: 'Login',
-}
+  Nav4: "Careers\n",
+  Nav12: "Home",
+  Nav511: "Contact",
+  Nav1: "Home",
+  image_src: "https://play.teleporthq.io/static/svg/default-img.svg",
+  Nav52: "Pricing",
+  Nav211: "Services",
+  Nav32: "About",
+  Register11: "Register",
+  Nav411: "Testimonials",
+  Register: "Request a consultation",
+  Nav31: "Portfolio",
+  Nav2: "Services",
+  image_alt: "image",
+  Nav311: "Portfolio",
+  Nav21: "Services",
+  Nav11: "Home",
+  rootClassName: "",
+  Nav42: "Careers\n",
+  Logo: "LOGO",
+  Nav51: "Contact",
+  Logo1: "TECHDEV",
+  image_alt1: "image",
+  image_src1: "54e2aa9c-186d-4f89-8f95-3e33b5306d24",
+  Nav111: "Home",
+  Nav41: "Testimonials",
+  Logo11: "TECHDEV",
+  Register1: "Register",
+  Login: "Login",
+  Nav5: "Pricing",
+  Nav22: "Services",
+  Nav3: "About",
+  Login1: "Login",
+};
 
 NavbarInteractive.propTypes = {
   Nav4: PropTypes.string,
@@ -176,6 +179,6 @@ NavbarInteractive.propTypes = {
   Nav22: PropTypes.string,
   Nav3: PropTypes.string,
   Login1: PropTypes.string,
-}
+};
 
-export default NavbarInteractive
+export default NavbarInteractive;
