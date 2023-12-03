@@ -45,7 +45,7 @@
   flex: 0 0 auto;
   width: auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   flex-direction: column;
 }
 .services-container2 {
@@ -53,15 +53,16 @@
   width: 100%;
   height: auto;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
 }
 .services-navlink {
   color: var(--dl-color-primary1-blue20);
   width: var(--dl-size-size-xxlarge);
-  height: var(--dl-size-size-medium);
+  height: auto;
   font-style: normal;
   margin-top: 200px;
+  padding: 10px;
   text-align: center;
   font-weight: 600;
   border-width: 0px;
@@ -70,7 +71,7 @@
   background-color: var(--dl-color-primary1-blue100);
 }
 .services-text4 {
-  font-size: 28px;
+  font-size: 24px;
 }
 .services-text5 {
   font-style: normal;

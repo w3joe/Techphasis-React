@@ -1,10 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import { Helmet } from 'react-helmet'
+import { Helmet } from "react-helmet";
 
-import NavbarInteractive from '../components/navbar-interactive'
-import Footer from '../components/footer'
-import './careers.css'
+import NavbarInteractive from "../components/navbar-interactive";
+import Footer from "../components/footer";
+import "./careers.css";
 
 const Careers = (props) => {
   return (
@@ -25,7 +25,7 @@ const Careers = (props) => {
           </span>
           <div className="careers-container2">
             <a
-              href="https://mailto:hello@techphasis.com?subject=Career%20%40%20Techphasis"
+              href="mailto:hello@techphasis.com?subject=Career%20%40%20Techphasis"
               target="_blank"
               rel="noreferrer noopener"
               className="careers-link button"
@@ -44,7 +44,7 @@ const Careers = (props) => {
         <Footer rootClassName="footer-root-class-name3"></Footer>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Careers
+export default Careers;

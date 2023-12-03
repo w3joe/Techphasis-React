@@ -122,6 +122,7 @@
 .home-text {
   color: var(--dl-color-primary1-blue100);
   font-size: 3rem;
+  font-weight: 700;
   max-width: 450px;
 }
 .home-text01 {

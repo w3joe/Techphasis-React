@@ -96,7 +96,6 @@
 }
 .navbar-interactive-register {
   color: var(--dl-color-gray-white);
-  height: 50px;
   transition: 0.3s;
   font-weight: bold;
   border-color: var(--dl-color-primary1-blue100);

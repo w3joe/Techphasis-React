@@ -31,11 +31,8 @@ const Services = (props) => {
           <ServiceBar rootClassName="service-bar-root-class-name"></ServiceBar>
           <div className="services-container2">
             <Link to="/contact" className="services-navlink button">
-              <span className="services-text4">
-                <span className="services-text5">
-                  Contact us for more details
-                </span>
-                <br></br>
+              <span className="services-text4 services-text5">
+                  Contact Us
               </span>
             </Link>
           </div>
